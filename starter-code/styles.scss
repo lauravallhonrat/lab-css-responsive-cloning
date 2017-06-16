@@ -1,6 +1,93 @@
+//colors
 $white: #f9f9f9;
 $red: #da5732;
+$grey: #dedede;
+$black: #000;
+//media queries sizes
+$smDeviceMinWidth: 320px;
+$smDeviceMaxWidth: 732px;
+$mdDeviceMinWidth: 768px;
+$lgMaxWidth: 1024px;
+
 body {
-  background-color:$red;
+  background-color:$white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+@media (min-device-width : $smDeviceMinWidth) and (max-device-width : $smDeviceMaxWidth) {
+.wrapper{
+  width: 100%;
+  display: flex;
+}
+.top-container{
+    display: column;
+    overflow: auto;
+    font-size: 10px;
+  }
+a{
+  text-decoration: none;
+  color: $black;
+}
+.nav{
+    flex-direction: row;
+    height: 60px;
+  img{
+    width: 50px;
+    height: 50px;
+    }
+  img:nth-child(2){
+     width: 30px;
+     height: 30px;
+     align-self: center;
+     position: relative;
+     bottom: 10px;
+    }
+  input{
+    width: 180px;
+    height: 30px;
+    position: relative;
+    bottom: 18px;
+   
+    }
+  textarea:focus {
+    outline: none;
+    } 
+  input:focus{
+    outline: none;
+    } 
+  .login{
+    float: right;
+    display: flex;
+    position: inherit;
+    a{
+      text-decoration: none;
+      padding: 16px 4px 0px 5px;
+    } 
+  } 
+  }
+  .menu-list{
+    display: flex;
+    list-style: none;
+    width: 100%;
+    float: right;
+    padding: 0px 5px 0px 5px;
+      li{
+        flex-direction: row;
+        padding: 0px 5px 0px 5px;
+        img{
+        width: 20px;
+        height: 20px;
+        }
+      }
+    
+    
+  }
+   
 }
 
+@media (min-device-width : $mdDeviceMinWidth ) and (max-device-width : $lgMaxWidth) {
+/* Styles */
+}
+
+@media (min-width : $lgMaxWidth) {
+/* Styles */
+}
